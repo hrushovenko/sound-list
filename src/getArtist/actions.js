@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios'
 
 export const GET_ARTIST_INFO = 'GET_ARTIST_INFO'
 export const RESET_ARTIST = 'RESET_ARTIST'
@@ -9,7 +9,7 @@ export const getArtistInfo = (name) => {
 
   return async function (dispatch) {
     const res = await axios.get(url)
-    const payload = res.data.artist;
+    const payload = res.data.artist
     return dispatch({
       type: GET_ARTIST_INFO,
       data: payload

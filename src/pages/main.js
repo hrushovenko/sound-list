@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import FetchTracks from '../getTracks/getTopTracks'
 
-export const Main = () => {
-  return (
-    <Fragment>
-      <FetchTracks />
-    </Fragment>
-  )
-}
+export const Main = () => (
+  <>
+    <FetchTracks />
+  </>
+)

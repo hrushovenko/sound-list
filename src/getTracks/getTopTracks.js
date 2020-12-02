@@ -1,11 +1,12 @@
-import React, {useEffect} from 'react'
-import {connect} from 'react-redux'
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 
-import {getTopTracks} from './actions'
-import {bindActionCreators} from 'redux'
+import { Routes } from '../utils/routes'
+import { getTopTracks } from './actions'
+import { bindActionCreators } from 'redux'
 
-const FetchData = ({tracks, getTopTracks, isLoaded}) => {
+const FetchData = ({ tracks, getTopTracks, isLoaded }) => {
   useEffect(() => {
     if (!isLoaded) {
       getTopTracks()
@@ -27,7 +28,7 @@ const FetchData = ({tracks, getTopTracks, isLoaded}) => {
               <td>"{track.name}"</td>
               <td>
                 <NavLink
-                  to={`about/${track.artist.name}`}
+                  to={`${Routes.ABOUT}/${track.artist.name}`}
                   exact
                 >
                   {track.artist.name}

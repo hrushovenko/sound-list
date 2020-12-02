@@ -1,4 +1,4 @@
-import {GET_TOP_TRACKS} from './actions'
+import { GET_TOP_TRACKS } from './actions'
 
 const initialState = {
   topTracks: [],

@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
 import tracksReducer from './getTracks/reducer'
 import artistReducer from './getArtist/reducer'

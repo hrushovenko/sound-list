@@ -1,25 +1,28 @@
-import React, {useEffect} from 'react'
-import {connect} from 'react-redux'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 
-import {getArtistInfo, resetArtist} from './actions'
-import {bindActionCreators} from 'redux'
+import { getArtistInfo, resetArtist } from './actions'
+import { bindActionCreators } from 'redux'
 
 const FetchData = ({artist, getArtistInfo, resetArtist, isLoaded, match}) => {
 
   useEffect(() => {
     isLoaded && resetArtist()
     getArtistInfo(match.params.name)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <div>
       <h3>Artist Info:</h3>
-      {!isLoaded && (
+      {!isLoaded ? (
         <div className="spinner-border text-dark" role="status">
           <span className="sr-only">Loading...</span>
         </div>
-      )}
-      {artist && (
+      ) :
+
+     ( artist && (
         <table className="table">
           <tbody>
             <tr >
@@ -34,7 +37,9 @@ const FetchData = ({artist, getArtistInfo, resetArtist, isLoaded, match}) => {
             </tr>
           </tbody>
         </table>  
-      )}
+      )
+    )}
+
     <div>
       {artist.bio && artist.tags.tag.map((tag, index) => {
           return(
@@ -50,7 +55,7 @@ const FetchData = ({artist, getArtistInfo, resetArtist, isLoaded, match}) => {
         })
       }
     </div>
-    <hr />
+    {isLoaded && <hr />}
     <div>
       <p className="text-justify">
         {artist.bio && artist.bio.content}

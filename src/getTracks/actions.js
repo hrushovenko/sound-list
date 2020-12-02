@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"
 
 export const GET_TOP_TRACKS = 'GET_TOP_TRACKS'
 

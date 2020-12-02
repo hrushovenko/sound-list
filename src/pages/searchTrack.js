@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Search from '../searchTrack/search'
 
-export const SearchTrack = () => {
-  return (
-    <Fragment>
-      <Search />
-    </Fragment>
-  )
-}
+export const SearchTrack = () => (
+  <>
+    <Search />
+  </>
+)

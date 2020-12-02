@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import FetchArtist from '../getArtist/getArtistInfo'
 
-export const AboutArtist = ({match}) => {
-  return (
-    <Fragment>
-      <FetchArtist match={match}/>
-    </Fragment>
-  )
-}
+export const AboutArtist = ({match}) => (
+  <>
+    <FetchArtist match={match}/>
+  </>
+)

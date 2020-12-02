@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios'
 
 export const SEARCH_TRACK = 'SEARCH_TRACK'
 export const INPUT_TRACK = 'INPUT_TRACK'

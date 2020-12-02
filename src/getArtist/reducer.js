@@ -1,4 +1,4 @@
-import {GET_ARTIST_INFO, RESET_ARTIST} from './actions'
+import { GET_ARTIST_INFO, RESET_ARTIST } from './actions';
 
 const initialState = {
   artist: {},
